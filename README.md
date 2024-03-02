@@ -15,6 +15,8 @@ The hardware integration is dead simple. The Pi found easily a home in the left 
 ## Software
 I was very suspicious of the Orange Debian version, but after all it does its job (after some streamlining such as killing unused services etc.). However be aware that their package repository is provided by Huawei, which is a company linked to the chinese government. This detail can make one uncomfortable. I did not have the time to test ArmBian.
 
+*The OrangePi wiki goes into great lengths for using complex tools to write their OS image to the SD card. This is all bulls..t. Just use dd.*
+
 I did not bother to manage certificates for the Pi, so that you get http only. As this is anyway only a home appliance isolated from the hostile internet, this should not be a concern.
 
 After some testing with VLC i finally adopted mpv as streaming software. I did not need PulseAudio (which i hate dearly) and struggled a bit to have barebones ALSA running. 
