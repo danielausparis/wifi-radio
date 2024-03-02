@@ -22,7 +22,7 @@ I did not bother to manage certificates for the Pi, so that you get http only. A
 After some testing with VLC i finally adopted mpv as streaming software. I did not need PulseAudio (which i hate dearly) and struggled a bit to have barebones ALSA running. 
 The front end is based on AngularJs (yes, totally outdated, but it is simple Javascript instead of Typescript, which i hate dearly as well). 
 
-The looks are nice thanks to the Pico CSS toolkit. The backend is PHP and the station list is just a JSON file. You can't do it simpler. 
+The looks are nice thanks to the Pico CSS toolkit and an old version of Font Awesome. The backend is PHP and the station list is just a JSON file. You can't do it simpler. 
 
 ![Alt text](https://i.ibb.co/zXLy3Jw/Screenshot-2024-02-17-10-30-36.png?raw=true "screenshot")
 
