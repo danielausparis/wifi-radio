@@ -1,0 +1,34 @@
+/* cancel scrolling */
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+.padd {
+  padding: 15px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-bottom-border {
+  border-top: 1px solid DimGray;
+  border-bottom : 1px solid DimGray;
+}
+
+.my-round-button {
+  background-color: DarkSeaGreen;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  width: 57px;
+  margin: 4px 2px;
+  border-radius: 50%;
+  cursor: pointer;
+}
