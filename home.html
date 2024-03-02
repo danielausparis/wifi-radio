@@ -1,0 +1,114 @@
+
+<div ng-controller="HomeController">
+
+  <dialog id="notificationModalId">
+    <article style="width:90%">
+      <div>
+        <br>
+        {{ notificationInfo }}
+        <br>
+        <br>
+        <button class=""
+          ng-click="hideNotification()">
+          Dismiss
+        </button>
+        <br><br><br>
+      </div>
+    </article>
+  </dialog>
+
+  <dialog id="editModalId">
+    <article>
+
+      <header><h4>{{verb}} Station</h4></header>
+
+      <label>label</label>
+      <input type="text" ng-model="currentStation.label">
+
+      <label>URL</label>
+      <input type="text" ng-model="currentStation.url">
+
+      <footer>
+        <a role="button"
+          class="secondary" ng-click="hideEditStation()">
+            Cancel
+        </a>
+        <a role="button" ng-click="saveStation()">
+          Save
+        </a>
+      </footer>
+    </article>
+  </dialog>
+
+  <dialog id="shutdownModalId" class="fade">
+    <article>
+      <header><h4>Shutdown Server</h4></header>
+      <footer>
+        <a role="button" class="secondary"
+          ng-click="hideShutdownModal()">Cancel</a>
+        <a role="button" ng-click="shutdown()">Shutdown Server</a>
+      </footer>
+    </article>
+  </dialog>
+
+  <dialog id="deleteStationModalId" class="fade">
+    <article>
+      <header><h4>Delete Station</h4></header>
+      <p>Delete station <b>{{stations[stationToDeleteIndex].label}}</b> ?</p>
+      <footer>
+        <a role="button" class="secondary"
+          ng-click="hideDeleteStationModal()">Cancel</a>
+        <a role="button" ng-click="deleteStation(stationToDeleteIndex)">Delete Station</a>
+      </footer>
+    </article>
+  </dialog>
+
+  <article>
+    <div class="flex-container">
+      <div>
+        <button ng-click="stop()">
+          <i class="fa fa-stop"></i>
+        </button>
+      </div>
+      <div>
+        <button ng-click="volumelower()">
+          <i class="fa fa-volume-down"></i>
+        </button>
+      </div>
+      <div>
+        <button ng-click="volumehigher()">
+          <i class="fa fa-volume-up"></i>
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <p class="padd">playing: <b style="color: lightgreen">{{ playingStation }}</b></p>
+
+  <div style="height: 40vh; overflow-y: scroll; overflow-x: hidden"
+    class="top-bottom-border">
+    <table>
+      <tr ng-repeat="station in stations track by $index">
+        <td ng-click="playStation($index)"><b>{{station.label}}</b></td>
+        <td><i ng-click="editStation($index)" class="fa fa-pencil-square-o"></i></td>
+        <td><i ng-click="displayDeleteStationModal($index)" class="fa fa-trash"></i></td>
+      </tr>
+    </table>
+  </div>
+
+  <br>
+  <article>
+    <div class="flex-container">
+      <div>
+        <button class="secondary" ng-click="displayShutdownModal()">
+          Shutdown
+        </button>
+      </div>
+      <div ng-click="addStation()" class="my-round-button"
+        style="text-decoration: none">
+        +
+      </div>
+    </div>
+  </article>
+
+</div>
