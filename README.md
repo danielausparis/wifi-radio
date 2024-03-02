@@ -1,7 +1,7 @@
 # wifi-radio
 modern day hifi radio project 
 
-## Overview
+## Motivation
 As I needed a replacement for my 30-year old radio of the bathroom, i observed that :
 - i wanted to listen to many radio stations, not just the local ones
 - with age i became spoiled in terms of hifi rendering, so i needed something on the level of .aac hifi streaming together with a good sound card... you see it coming now i guess
